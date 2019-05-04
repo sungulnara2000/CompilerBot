@@ -1,2 +1,2 @@
 # CompilerBot
-2 rewiew in python course. Second MIPT GIHT term.
+2nd rewiew in python course. Second MIPT GIHT term.
