@@ -12,11 +12,6 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-    if message.text.lower() == 'привет':
-        bot.send_message(message.chat.id, 'Гульнара любит тебя <3')
-    elif message.text.lower() == 'пока':
-        bot.send_message(message.chat.id, 'Скучаю, скоро увидимся!')
-    else:
         print(message.text)
         PARAMS = {"script": message.text,
                   "language": "cpp",
