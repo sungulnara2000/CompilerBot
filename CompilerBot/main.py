@@ -25,7 +25,6 @@ def send_text(message):
         params = {"script": message.text,
                   "language": "cpp",
                   "versionIndex": "0",
-                  # "stdin":
                   "clientId": "572a7d3d9dcafa3d2e7596e710656c70",
                   "clientSecret": "806d6ae46c4fc99e82c259b196c9ae0ee53ebf91ac0919519ad07cc9308dc1ab"}
         print(params)
