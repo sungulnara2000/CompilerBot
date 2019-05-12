@@ -19,11 +19,6 @@ program = Program('cpp')
 def start_message(message):
     bot.send_message(message.chat.id, 'Привет!')
 
-@bot.message_handler(commands=['code'])
-def get_code(message):
-    bot.send_message(message.chat.id, 'Пришли мне свой код!')
-
-
 @bot.message_handler(content_types=['text'])
 def send_text(message):
         print(message.text)
