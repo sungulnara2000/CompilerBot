@@ -2,7 +2,10 @@
 2nd rewiew in python course. Second MIPT DIHT term.
 
 Телеграм-бот запущен на инстансе aws. Его можно найти по ссылке: t.me/CppCompilerBot.
-token: 886490740:AAHCNylo55qhlWGcyiJ4fRe_u1Ov2AoK01M
+Данные для config:
+Как создать бота?
+Воспользуйтесь BotFather, получите токен вашего бота и настройте его.
+Зарегестрируйтесь на сайте https://www.jdoodle.com, оформите бесплатную подписку, получите clientId и clientSecret.
 
 Как запустить код?
 -git clone https://github.com/sungulnara2000/CompilerBot.git compiler_bot
