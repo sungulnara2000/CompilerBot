@@ -1,19 +1,20 @@
 import telebot
 import requests
+import configparser
+import os
 
+config_parser = configparser.RawConfigParser()
+config_file_path = os.path.join(os.path.dirname(__file__), 'config.cfg')
+config_parser.read(config_file_path)
+URL = config_parser.get('info', 'URL')
+token = config_parser.get('info', 'token')
+clientID = config_parser.get('info', 'clientID')
+clientSecret = config_parser.get('info', 'clientSecret')
 
-URL = "https://api.jdoodle.com/v1/execute"
+print(token)
 
-bot = telebot.TeleBot('886490740:AAHCNylo55qhlWGcyiJ4fRe_u1Ov2AoK01M')
-
-class Program:
-    code = ''
-    input = ''
-    language = ''
-    def __init__(self, language):
-        self.language = language
-
-program = Program('cpp')
+if __name__ == '__main__':
+    bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
@@ -21,16 +22,18 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-        print(message.text)
-        params = {"script": message.text,
-                  "language": "cpp",
-                  "versionIndex": "0",
-                  "clientId": "572a7d3d9dcafa3d2e7596e710656c70",
-                  "clientSecret": "806d6ae46c4fc99e82c259b196c9ae0ee53ebf91ac0919519ad07cc9308dc1ab"}
-        print(params)
-        r = requests.post(url=URL, json=params)
+    params = {"script": message.text,
+              "language": "cpp",
+              "versionIndex": "0",
+              "clientId": clientID,
+              "clientSecret": clientSecret}
+    r = requests.post(url=URL, json=params)
+    if r.status_code == 200:
         data = r.json()
-        bot.send_message(message.chat.id, data['output'])
+        bot.send_message(message.chat.id, 'Вывод: ' + data['output'])
+    else:
+        bot.send_message(message.chat.id, 'Ошибка')
+
 
 bot.polling()
 
