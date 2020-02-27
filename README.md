@@ -1,15 +1,15 @@
 # CompilerBot
 2nd rewiew in python course. Second MIPT DIHT term.
 
-Телеграм-бот запущен на инстансе aws. Его можно найти по ссылке: t.me/CppCompilerBot.
-Данные для config:
-Как создать бота?
-Воспользуйтесь BotFather, получите токен вашего бота и настройте его.
-Зарегестрируйтесь на сайте https://www.jdoodle.com, оформите бесплатную подписку, получите clientId и clientSecret.
+Telegram bot running on aws instance. It can be found at: t.me/CppCompilerBot. <br />
+Data for config: <br />
+How to create a bot? <br />
+Use BotFather, get the token of your bot and configure it. <br />
+Register on the site https://www.jdoodle.com, sign up for a free subscription, get clientId and clientSecret. <br />
 
-Как запустить код?
--git clone https://github.com/sungulnara2000/CompilerBot.git compiler_bot
--pip3 install telebot
--cd compiler_bot
+How to run?<br />
+-git clone https://github.com/sungulnara2000/CompilerBot.git compiler_bot <br />
+-pip3 install telebot <br />
+-cd compiler_bot <br />
 -python3 CompilerBot/main.py
 
