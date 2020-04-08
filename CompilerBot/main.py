@@ -11,7 +11,6 @@ token = config_parser.get('info', 'token')
 clientID = config_parser.get('info', 'clientID')
 clientSecret = config_parser.get('info', 'clientSecret')
 
-print(token)
 
 if __name__ == '__main__':
     bot = telebot.TeleBot(token)
